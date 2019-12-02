@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
 import { NavShellComponent } from './nav-shell/nav-shell.component';
 import { LayoutModule as lmm} from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,7 +11,7 @@ import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
-  declarations: [LayoutComponent, NavShellComponent],
+  declarations: [NavShellComponent],
   imports: [
     CommonModule,
     lmm,
