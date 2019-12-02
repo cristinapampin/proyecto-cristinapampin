@@ -5,9 +5,9 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Búsqueda detallada</a>
-      <a mat-list-item href="#">Regiones</a>
-      <a mat-list-item href="#">todo</a>
+      <a mat-list-item routerLink= "" >Búsqueda detallada</a>
+      <a mat-list-item >Regiones</a>
+      <a mat-list-item >todo</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,6 +22,6 @@
       </button>
       <span>Explorador</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
