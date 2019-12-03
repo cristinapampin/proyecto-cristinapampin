@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountriesService } from '../countries/countries.service';
 
 @Component({
   selector: 'abanca-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  countries: any[] = [];
+  selectedCountry: any;
+
+  constructor(public countriesService: CountriesService) { }
 
   ngOnInit() {
+    this.countriesService.getCountries().subscribe(data => {
+      this.countries = data;
+      console.log(this.countries);
+    });
+  }
+  toSelectCountry(country:any){
+    this.selectedCountry = country;
   }
 
 }
