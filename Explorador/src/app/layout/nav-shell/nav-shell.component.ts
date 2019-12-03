@@ -3,9 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-
 @Component({
-  selector: 'abanca-nav-shell',
+  selector: 'app-nav-shell',
   templateUrl: './nav-shell.component.html',
   styleUrls: ['./nav-shell.component.css']
 })

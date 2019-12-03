@@ -1,17 +1,8 @@
-<h1 fxFlex="100" fxLayoutAlign="center center" >HOME</h1>
-<div fxLayoutAling="center">
-<mat-form-field>
-  <mat-label>Elige un país</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let country of countries" [value]="country.id">
-      {{country.name}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<button mat-button (click)="toSelectCountry()">Buscar</button>
-</div>
-<nav>
-  <a routerLink=" ">Another route</a>
-  <br/>
-  <a routerLink=" ">Home</a>
-</nav>
+<app-countries-list
+  *ngIf="countries$ | async as countries; else empty"
+  [countries]="countries"
+></app-countries-list>
+
+<ng-template #empty>
+  Loading...
+</ng-template>

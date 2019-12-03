@@ -1,26 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { CountriesService } from '../countries/countries.service';
+import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
+import { ApiService } from "../api.service";
 
 @Component({
-  selector: 'abanca-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
+  countries$: Observable<any[]>;
 
-  countries: any[] = [];
-  selectedCountry: any;
-
-  constructor(public countriesService: CountriesService) { }
+  constructor(private api: ApiService) {}
 
   ngOnInit() {
-    this.countriesService.getCountries().subscribe(data => {
-      this.countries = data;
-      console.log(this.countries);
-    });
+    this.countries$ = this.api.getAllCountries$();
   }
-  toSelectCountry(country:any){
-    this.selectedCountry = country;
-  }
-
 }
