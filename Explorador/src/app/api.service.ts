@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class ApiService {
   }
   getAllRegions$() {
     const url = this.regionEndPoint;
-    return this.httpClient.get<any[]>(url).pipe(map(result => result[1]));
+    return this.httpClient.get<any[]>(url).pipe(tap(r => console.log(r)),map(result => result[1]));
   }
 
 

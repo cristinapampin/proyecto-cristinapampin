@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'abanca-regions-list',
@@ -6,8 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./regions-list.component.css']
 })
 export class RegionsListComponent implements OnInit {
-   regions: any[];
-
+  @Input() regions: any[];
   constructor() { }
 
   ngOnInit() {
