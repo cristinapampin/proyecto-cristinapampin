@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'abanca-region',
+  selector: 'app-region',
   templateUrl: './region.component.html',
   styleUrls: ['./region.component.css']
 })

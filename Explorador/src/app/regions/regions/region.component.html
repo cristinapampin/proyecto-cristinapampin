@@ -1,0 +1,9 @@
+<p>region works!</p>
+<abanca-regions-list
+  *ngIf="regions$ | async as regions; else empty"
+  [regions]="regions"
+></abanca-regions-list>
+
+<ng-template #empty>
+  Loading...
+</ng-template>

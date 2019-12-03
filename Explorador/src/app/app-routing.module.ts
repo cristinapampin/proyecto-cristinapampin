@@ -1,25 +1,25 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
-    loadChildren: () => import("./home/home.module").then(m => m.HomeModule)
+    path: 'countries',
+    loadChildren: () =>
+      import('./country/country.module').then(m => m.CountryModule)
   },
   {
-    path: "countries",
+    path: 'search',
     loadChildren: () =>
-      import("./country/country.module").then(m => m.CountryModule)
+      import('./search/search.module').then(m => m.SearchModule)
   },
   {
-    path: "search",
+    path: 'regions',
     loadChildren: () =>
-      import("./search/search.module").then(m => m.SearchModule)
+      import('./regions/regions.module').then(m => m.RegionsModule)
   },
   {
-    path: "regions",
-    loadChildren: () =>
-      import("./regions/regions.module").then(m => m.RegionsModule)
+    path: '',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }
 ];
 
