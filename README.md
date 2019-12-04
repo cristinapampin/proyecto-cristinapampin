@@ -29,15 +29,15 @@ Desarrollar una aplicación web con Angular y estética Material Design que mues
 
 # Tareas:
 
-:white_check_mark: `/` Mostrar un listado de todos los países
-:white_check_mark: `/country/:COD3` Ver datos básicos de un país
-:white_check_mark: `/search` Mostrar un selector de niveles de ingreso
-:white_check_mark: `/search` Filtrar los países por nivel de ingresos
-:white_check_mark: `/search` Mostrar un grupo de opciones por tipo de deuda
-:white_check_mark: `/search` Filtrar los países también por tipo de deuda
-:white_check_mark: `/search` Mostrar un selector de regiones geográficas
-:white_check_mark: `/search` Filtrar los países también por regiones geográficas
-:white_check_mark: `/regions` `/regions/:COD3` Lista de regiones y ficha con la lista de sus países
+:white_check_mark: `/` Mostrar un listado de todos los países <br/>
+:white_check_mark: `/country/:COD3` Ver datos básicos de un país <br/>
+:white_check_mark: `/search` Mostrar un selector de niveles de ingreso <br/>
+:white_check_mark: `/search` Filtrar los países por nivel de ingresos <br/>
+:white_check_mark: `/search` Mostrar un grupo de opciones por tipo de deuda <br/>
+:white_check_mark: `/search` Filtrar los países también por tipo de deuda <br/>
+:white_check_mark: `/search` Mostrar un selector de regiones geográficas <br/>
+:white_check_mark: `/search` Filtrar los países también por regiones geográficas <br/>
+:white_check_mark: `/regions` `/regions/:COD3` Lista de regiones y ficha con la lista de sus países <br/>
 - [ ] `/country/:COD3` Mostrar indicadores avanzados en la ficha de un país
 
 
