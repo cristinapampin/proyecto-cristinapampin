@@ -10,6 +10,7 @@ import { ApiService } from '../api.service';
 })
 export class CountryComponent implements OnInit {
   country$: Observable<any>;
+  countryDetails$: Observable<any>;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -19,5 +20,6 @@ export class CountryComponent implements OnInit {
   ngOnInit() {
     const countryId = this.activatedRoute.snapshot.params.countryId;
     this.country$ = this.api.getCountryById$(countryId);
+    this.countryDetails$ = this.api.getCountryDetailsById$(countryId);
   }
 }
