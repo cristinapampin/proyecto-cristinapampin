@@ -1,6 +1,6 @@
 <form [formGroup]="formFilters" (ngSubmit)="applyFilters()">
 
-<mat-form-field *ngIf="incomeLevels;else noIncomeLevels">
+<mat-form-field *ngIf="incomeLevels; else noIncomeLevels">
   <mat-label>Income level</mat-label>
   <mat-select formControlName="selectedIncomeLevel">
     <mat-option *ngFor="let income of incomeLevels" [value]="income.id">
@@ -30,6 +30,7 @@
 </mat-form-field>
 
 <button mat-raised-button color="primary" type="submit">Search</button>
+<button mat-raised-button color="primary" type="reset">Reset</button>
 </form>
 
 <ng-template #noIncomeLevels>Loading income levels...</ng-template>

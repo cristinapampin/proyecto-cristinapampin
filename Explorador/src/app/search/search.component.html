@@ -7,7 +7,5 @@
 >
 </abanca-form-filters>
 <br/>
-<app-countries-list
-
-*ngIf="countriesFiltered$ | async as countries"
+<app-countries-list *ngIf="countriesFiltered$ | async as countries"
   [countries]="countries"></app-countries-list>
