@@ -1,0 +1,37 @@
+<form [formGroup]="formFilters" (ngSubmit)="applyFilters()">
+
+<mat-form-field *ngIf="incomeLevels;else noIncomeLevels">
+  <mat-label>Income level</mat-label>
+  <mat-select formControlName="selectedIncomeLevel">
+    <mat-option *ngFor="let income of incomeLevels" [value]="income.id">
+      {{income.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<mat-form-field *ngIf="lendingTypes;else noLendingTypes">
+  <mat-label>Lending type</mat-label>
+  <mat-select formControlName="selectedLendingType">
+    <mat-option *ngFor="let lending of lendingTypes" [value]="lending.id">
+      {{lending.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<mat-form-field *ngIf="regionsFilter;else noRegionsFilter">
+  <mat-label>Region filter</mat-label>
+  <mat-select formControlName="selectedRegionFilter">
+    <mat-option *ngFor="let region of regionsFilter" [value]="region.code">
+      {{region.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-raised-button color="primary" type="submit">Search</button>
+</form>
+
+<ng-template #noIncomeLevels>Loading income levels...</ng-template>
+<ng-template #noLendingTypes>Loading lending types...</ng-template>
+<ng-template #noRegionsFilter>Loading regions filter...</ng-template>

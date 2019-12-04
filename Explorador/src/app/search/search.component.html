@@ -1,1 +1,13 @@
-<p>search works!</p>
+<h1>Search</h1>
+<abanca-form-filters
+[incomeLevels]="incomeLevels$ | async"
+[lendingTypes]="lendingType$ | async"
+[regionsFilter]="regionsFilter$ | async"
+(applyFilterEvent)="filterResults($event)"
+>
+</abanca-form-filters>
+<br/>
+<app-countries-list
+
+*ngIf="countriesFiltered$ | async as countries"
+  [countries]="countries"></app-countries-list>

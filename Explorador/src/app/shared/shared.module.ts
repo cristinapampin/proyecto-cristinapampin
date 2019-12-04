@@ -1,13 +1,12 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { MatListModule } from "@angular/material/list";
-import { RouterModule } from "@angular/router";
-import { CountriesListComponent } from "./countries-list/countries-list.component";
-import { RegionsListComponent } from '../regions/regions/regions-list/regions-list.component';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
+import { CountriesListComponent } from './countries-list/countries-list.component';
 
 @NgModule({
-  declarations: [CountriesListComponent, RegionsListComponent],
+  declarations: [CountriesListComponent],
   imports: [CommonModule, MatListModule, RouterModule],
-  exports: [CountriesListComponent, RegionsListComponent]
+  exports: [CountriesListComponent]
 })
 export class SharedModule {}

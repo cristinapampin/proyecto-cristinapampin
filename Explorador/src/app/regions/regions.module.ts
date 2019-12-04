@@ -1,16 +1,18 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RegionsRoutingModule } from './regions-routing.module';
 import { RegionsComponent } from './regions.component';
-import { RegionsListComponent } from './regions/regions-list/regions-list.component';
+import { RegionsListComponent } from './regions-list/regions-list.component';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
   declarations: [RegionsComponent, RegionsListComponent],
   imports: [
     CommonModule,
-    RegionsRoutingModule
-  ], schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    RegionsRoutingModule,
+    MatListModule
+  ]
 })
 export class RegionsModule { }

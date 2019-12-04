@@ -1,1 +1,14 @@
-<p>region works!</p>
+<abanca-region-card
+  *ngIf="region$ | async as region; else empty"
+  [region]="region">
+
+</abanca-region-card>
+
+<ng-template #empty>Loading...</ng-template>
+<ng-template #noCountries>No contries founded.</ng-template>
+
+<app-countries-list
+*ngIf="countries$ | async as countriesOfRegion; else noCountries"
+  [countries]="countriesOfRegion"
+
+></app-countries-list>
