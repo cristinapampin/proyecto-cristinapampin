@@ -60,10 +60,17 @@ export class ApiService {
 
   }
   getCountryDetailsById$(countryId) {
-    const url = this.endPoint + '/country/' + countryId +
-    '/indicators/SP.POP.TOTL;NY.GDP.MKTP.CD/?source=2&date=2018&per_page=1000&format=json';
+    const url = this.httpClient.get(this.endPoint + '/country/' + countryId +
+    '/indicators/SP.POP.TOTL;NY.GDP.MKTP.CD/?source=2&date=2018&per_page=1000&format=json');
     console.log(url);
-    return this.httpClient.get<any>(url).pipe(map(result => result[1][0]));
+    return url.pipe(map(result => {
+      let results;
+      results = {
+        pibResult: result[1][0].value,
+        totalPopulationResult: result[1][1].value
+      };
+      return results;
+    }));
   }
 
 }
